@@ -1,1 +1,1 @@
-# python-basics-by-cookbook
+# Python basics by cookbook(2nd edition)
