@@ -1,6 +1,6 @@
 * Chapters
-    * Chatper 6: OOP (p253)
+    * Chatper 6: OOP
 
-* TODO: 253
+* TODO: 
 
 * Use underscore instead of camel case, https://www.python.org/dev/peps/pep-0008/
