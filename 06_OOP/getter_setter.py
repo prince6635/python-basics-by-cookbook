@@ -53,6 +53,8 @@ class Temperature(object):
         """Simply print."""
         return "%s K" % self.k
 
+    # http://stackoverflow.com/questions/1436703/difference-between-str-and-repr-in-python
+    # always implement __repr__ for printing, since __str__ uses it, too.
     def __repr__(self):
         """Detailed print."""
         return "Temperature(k=%r)" % self.k
