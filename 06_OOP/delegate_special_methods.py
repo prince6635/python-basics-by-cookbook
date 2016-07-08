@@ -67,6 +67,7 @@ method with the appropriate first argument
 def proxy(obj, *specials):
     """factory-function for a proxy able to delegate special methods."""
     # do we already have a suitable customized class around?
+    # !!! .__class__ is a reference to the type of the current instance.
     obj_cls = obj.__class__
     key = obj_cls, specials
     # (<type 'list'>, ('len', 'iter'))
