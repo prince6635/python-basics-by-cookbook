@@ -27,6 +27,8 @@ some special methods to an object it's wrapping needs to belong to a specially
 made and tailored class. Fortunately, as this recipe shows, making and
 instantiating classes on the fly is quite an easy job in Python.
 """
+
+
 class Proxy(object):
     """base class for all proxies."""
     def __init__(self, obj):
@@ -60,6 +62,8 @@ class within a make_binder closure. make_binder deals with calling the unbound
 method with the appropriate first argument
 (i.e., the object being wrapped, self._obj).
 """
+
+
 def proxy(obj, *specials):
     """factory-function for a proxy able to delegate special methods."""
     # do we already have a suitable customized class around?
