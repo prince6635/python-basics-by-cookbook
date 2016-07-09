@@ -17,6 +17,7 @@ def empty_copy(obj):
     new_copy.__class__ = obj.__class__
     return new_copy
 
+
 class MyClass(object):
     def __init__(self):
         # assume there's a lot of work here
