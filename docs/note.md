@@ -6,4 +6,6 @@ http://stackoverflow.com/questions/1436703/difference-between-str-and-repr-in-py
 
 * string format: https://pyformat.info/
 
- 
+* arbitrary number of arguments http://stackoverflow.com/questions/36901/what-does-double-star-and-star-do-for-python-parameters
+    - *args will give you all function parameters as a tuple
+    - **kwargs will give you all keyword arguments except for those corresponding to a formal parameter as a dictionary
