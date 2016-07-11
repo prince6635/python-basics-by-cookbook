@@ -12,7 +12,12 @@ class Singleton(object):
     """A Pythonic Singleton."""
     def __new__(cls, *args, **kwargs):
         if '_instance' not in vars(cls):
+            # vars and __dict__,
+            # http://stackoverflow.com/questions/21297203/use-dict-or-vars
             cls._instance = super(Singleton, cls).__new__(cls)
+
+            # only for testing
+            cls._instance.data = list(args)
         return cls._instance
 
 
@@ -101,6 +106,13 @@ in my paper available at http://www.aleax.it/5ep.html.)
 
 
 if __name__ == "__main__":
+    s1 = Singleton('a', 'b', 1)
+    # ['a', 'b', 1]
+    print s1.data
+    s2 = Singleton(2, 3, 'c')
+    # ['a', 'b', 1] ['a', 'b', 1]
+    print s1.data, s2.data
+
     class SingletonSpam(Singleton):
         def __init__(self, arg):
             self.arg = arg
