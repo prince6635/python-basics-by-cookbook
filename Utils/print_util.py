@@ -2,6 +2,10 @@
 
 from pprint import pprint
 
+def print_obj(obj):
+    """Print only __dict__"""
+    print(obj.__dict__)
+    print('===================')
 
 def print_obj_user_defined(obj):
     """Print only user defined properties of an object."""
@@ -15,6 +19,11 @@ def print_obj_all(obj):
         print "obj.%s = %s" % (attr, getattr(obj, attr))
     print('===================')
 
+def print_exception(ex):
+    ex_template = "An exception of type {0} occured. Arguments:\n{1!r}"
+    ex_message = ex_template.format(type(ex).__name__, ex.args)
+    print ex_message
+    print('===================')
 
 class TestClass(object):
     """docstring for TestClass."""
@@ -32,8 +41,16 @@ class TestClass(object):
         """Return age."""
         return self.Age
 
+def throw_exception():
+    raise IOError("io error!")
 
 if __name__ == "__main__":
     tc = TestClass("f1", "f2")
-    print_obj_all(tc)
-    print_obj_user_defined(tc)
+    # print_obj_all(tc)
+    # print_obj_user_defined(tc)
+    print_obj(tc)
+
+    try:
+        throw_exception()
+    except Exception as ex:
+        print_exception(ex)
