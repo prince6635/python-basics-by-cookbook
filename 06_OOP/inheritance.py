@@ -1,4 +1,17 @@
-"""This module shows inheritance in OOP."""
+"""This module shows inheritance in OOP.
+
+In python, all class methods are "virtual" (in terms of C++)
+class Super():
+  def method1():
+    pass
+
+class Sub(Super):
+  def method1(param1, param2, param3):
+      stuff
+
+For this example, you can only call Sub().method1(p1, p2, p3),
+can't call Sub().methiod1()
+"""
 
 
 class BaseClass(object):

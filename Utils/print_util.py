@@ -2,10 +2,12 @@
 
 from pprint import pprint
 
+
 def print_obj(obj):
     """Print only __dict__"""
     print(obj.__dict__)
     print('===================')
+
 
 def print_obj_user_defined(obj):
     """Print only user defined properties of an object."""
@@ -19,11 +21,24 @@ def print_obj_all(obj):
         print "obj.%s = %s" % (attr, getattr(obj, attr))
     print('===================')
 
+
 def print_exception(ex):
     ex_template = "An exception of type {0} occured. Arguments:\n{1!r}"
     ex_message = ex_template.format(type(ex).__name__, ex.args)
     print ex_message
     print('===================')
+
+
+def print_cur_memory():
+    import psutil
+    import os
+    # https://pythonhosted.org/psutil/
+    # in bytes
+    bs = psutil.Process(os.getpid()).memory_info().rss
+    from hurry.filesize import size
+    mbs = size(bs)
+    print mbs
+
 
 class TestClass(object):
     """docstring for TestClass."""
@@ -41,8 +56,11 @@ class TestClass(object):
         """Return age."""
         return self.Age
 
+err = IOError("io error!")
+
+
 def throw_exception():
-    raise IOError("io error!")
+    raise err
 
 if __name__ == "__main__":
     tc = TestClass("f1", "f2")
@@ -52,5 +70,10 @@ if __name__ == "__main__":
 
     try:
         throw_exception()
-    except Exception as ex:
-        print_exception(ex)
+    # except Exception as ex:
+        # print_exception(ex)
+    # except err:
+    except IOError:
+        print('done')
+
+    print_cur_memory()
