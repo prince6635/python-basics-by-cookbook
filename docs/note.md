@@ -14,3 +14,5 @@ http://stackoverflow.com/questions/1436703/difference-between-str-and-repr-in-py
     http://stackoverflow.com/questions/472000/usage-of-slots
     http://stackoverflow.com/questions/20406363/setattr-versus-slots-for-constraining-attribute-creation-in-python
     mainly based on whether you need __setattr__ or not.
+
+* difference between is and == (copy_object.py)
