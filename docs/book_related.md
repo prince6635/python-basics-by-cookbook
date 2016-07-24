@@ -1,7 +1,8 @@
 * Chapters
     * (done) Chapter 6: OOP
-    * Chapter 4: Python Shortcuts
+    * Chapter 4: Python Shortcuts - 4.7
     * Chapter 8: Debugging and Testings
+    # Chapter 18: Algorithms - 18.3
 
 * TODO:
 
