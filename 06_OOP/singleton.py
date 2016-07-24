@@ -5,6 +5,17 @@ Just have your class inherit from Singleton, and don't override __new__.
 Then, all calls to that class (normally creations of new instances) return the
 same instance. (The instance is created once, on the first such call to each
 given subclass of Singleton during each run of your program.)
+
+for Python,
+http://stackoverflow.com/questions/31875/is-there-a-simple-elegant-way-to-define-singletons-in-python
+As a module with functions (and not a class) would serve well as a singleton.
+All its variables would be bound to the module, which could not be instantiated
+repeatedly anyway.
+
+If you do wish to use a class, there is no way of creating private classes or
+private constructors in Python, so you can't protect against multiple
+instantiations, other than just via convention in use of your API. I would
+still just put methods in a module, and consider the module as the singleton.
 """
 
 

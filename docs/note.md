@@ -16,3 +16,11 @@ http://stackoverflow.com/questions/1436703/difference-between-str-and-repr-in-py
     mainly based on whether you need __setattr__ or not.
 
 * difference between is and == (copy_object.py)
+
+* EGFP(easier to get forgiveness than permission):
+    basically it's preferable in Python to use try/catch instead of checking it's None or not.
+    http://stackoverflow.com/questions/12265451/ask-forgiveness-not-permission-explain
+
+* set global variables in a function,
+    http://effbot.org/pyfaq/how-do-you-set-a-global-variable-in-a-function.htm
+    http://stackoverflow.com/questions/1977362/how-to-create-module-wide-variables-in-python

@@ -2,6 +2,11 @@
 
 from pprint import pprint
 
+# http://stackoverflow.com/questions/493386/how-to-print-in-python-without-newline-or-space
+# def print_without_newline(str):
+#     from __future__ import print_function
+#     print(str, end="", flush=True)
+#
 
 def print_obj(obj):
     """Print only __dict__"""
